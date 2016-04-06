@@ -11,9 +11,10 @@ import Firebase
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     // Create a reference to a Firebase location
-    var myRootRef = Firebase(url:"https://chatroom-ios-test.firebaseio.com")
+//    var myRootRef = Firebase(url:"https://chatroom-ios-test.firebaseio.com")
+    var myRootRef = Firebase(url:"https://vivid-inferno-5031.firebaseio.com")
     
     
     
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
         
         let usersRef = myRootRef.childByAutoId()
         
-       
+       var users = ["name": nameInput.text, "text": textInput.text]
+        usersRef.setValue(users)
         
         usersRef.childByAppendingPath("name").setValue(nameInput.text)
         usersRef.childByAppendingPath("text").setValue(textInput.text)
@@ -41,15 +43,16 @@ class ViewController: UIViewController {
             
 
         })
-        
+        var timer:NSTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "text_clean", userInfo: nil, repeats: false)
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        nameInput.delegate = self
+        textInput.delegate = self
         // Write data to Firebase
-
+        
         
         myRootRef.observeEventType(.ChildAdded, withBlock: { snapshot in
             println(snapshot.value.objectForKey("name"))
@@ -65,7 +68,31 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func textFieldShouldReturn(nameInput: UITextField) -> Bool { //隐藏键盘
+        nameInput.resignFirstResponder()
+        textInput.resignFirstResponder()
+        return true
+    }
+    func textFieldDidBeginEditing(nameInput: UITextField)
+    {
+        nameInput.becomeFirstResponder()
+        textInput.canBecomeFirstResponder()
+        let frame: CGRect = nameInput.frame
+        var offset: CGFloat = frame.origin.y+32-(self.view.frame.size.height-263)
+        let animationDuration : NSTimeInterval = 0.30
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(animationDuration) //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+        if(offset > 0) { self.view.frame = CGRectMake(0.0, -offset, self.view.frame.size.width, self.view.frame.size.height) }
+        UIView.commitAnimations()
+    }
+    func textFieldDidEndEditing( nameInput: UITextField) {
+        self.view.frame = CGRectMake(0, 65, self.view.frame.size.width, self.view.frame.size.height)
+    }
 
+    func text_clean(){
+        textInput.text = ""
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

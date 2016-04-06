@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,38 +18,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-ql-zjQ">
-                                <rect key="frame" x="248" y="322" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="D13-pO-TrS">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="588"/>
                                 <animations/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-ql-zjQ">
+                                <rect key="frame" x="228" y="527" width="43" height="35"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.22630980498890596" blue="0.41422944446810039" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.61861300355450233" green="0.22899023382279002" blue="0.29366042292128069" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1X6-AF-ujE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="say ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-vj-m8u">
-                                <rect key="frame" x="93" y="322" width="147" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="say ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-vj-m8u">
+                                <rect key="frame" x="73" y="530" width="147" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-tS-Fi0">
-                                <rect key="frame" x="23" y="322" width="56" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-tS-Fi0">
+                                <rect key="frame" x="9" y="530" width="56" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="welcome !" translatesAutoresizingMaskIntoConstraints="NO" id="B6e-BQ-Se7">
-                                <rect key="frame" x="33" y="28" width="240" height="274"/>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-2B-Fak">
+                                <rect key="frame" x="9" y="56" width="303" height="466"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B6e-BQ-Se7">
+                                <rect key="frame" x="9" y="56" width="303" height="466"/>
+                                <animations/>
+                                <color key="textColor" red="0.0" green="0.028797784336694637" blue="0.060093305687203835" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice to meet you~ :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-Hd-zlU">
+                                <rect key="frame" x="16" y="20" width="288" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tSc-tS-Fi0" firstAttribute="leading" secondItem="B6e-BQ-Se7" secondAttribute="leading" id="2i7-uI-GXc"/>
+                            <constraint firstItem="4IW-ql-zjQ" firstAttribute="leading" secondItem="D13-pO-TrS" secondAttribute="trailing" constant="-92" id="7Zs-S8-68u"/>
+                            <constraint firstItem="D13-pO-TrS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-20" id="81T-nH-ZGj"/>
+                            <constraint firstItem="4IW-ql-zjQ" firstAttribute="top" secondItem="2Su-2B-Fak" secondAttribute="bottom" constant="5" id="8Jp-q1-f43"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D13-pO-TrS" secondAttribute="trailing" constant="-16" id="9QA-pv-bDT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B6e-BQ-Se7" secondAttribute="trailing" constant="-8" id="Aht-oc-4t8"/>
+                            <constraint firstItem="B6e-BQ-Se7" firstAttribute="top" secondItem="QTm-Hd-zlU" secondAttribute="bottom" constant="2" id="COe-54-zCJ"/>
+                            <constraint firstItem="2Su-2B-Fak" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-7" id="G64-7v-PdU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Su-2B-Fak" secondAttribute="trailing" constant="-8" id="Hfq-1L-pJh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="D13-pO-TrS" secondAttribute="bottom" id="Il3-R1-cnK"/>
+                            <constraint firstItem="2Su-2B-Fak" firstAttribute="top" secondItem="QTm-Hd-zlU" secondAttribute="bottom" constant="2" id="Jpz-0T-j5o"/>
+                            <constraint firstItem="D13-pO-TrS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Rdk-Pe-LDD"/>
+                            <constraint firstItem="tSc-tS-Fi0" firstAttribute="width" secondItem="D13-pO-TrS" secondAttribute="width" multiplier="56:320" id="ZAf-OH-kGT"/>
+                            <constraint firstItem="tSc-tS-Fi0" firstAttribute="top" secondItem="D13-pO-TrS" secondAttribute="bottom" constant="-38" id="alt-nh-LaC"/>
+                            <constraint firstItem="MyD-vj-m8u" firstAttribute="leading" secondItem="tSc-tS-Fi0" secondAttribute="trailing" constant="8" id="bcJ-yb-dcq"/>
+                            <constraint firstItem="QTm-Hd-zlU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="cFe-1b-v8Q"/>
+                            <constraint firstItem="4IW-ql-zjQ" firstAttribute="top" secondItem="B6e-BQ-Se7" secondAttribute="bottom" constant="5" id="fpo-ZB-hrd"/>
+                            <constraint firstItem="QTm-Hd-zlU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hLS-J4-w03"/>
+                            <constraint firstItem="QTm-Hd-zlU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="jON-P0-3TM"/>
+                            <constraint firstItem="tSc-tS-Fi0" firstAttribute="centerY" secondItem="MyD-vj-m8u" secondAttribute="centerY" id="mDl-z1-wwb"/>
+                            <constraint firstItem="4IW-ql-zjQ" firstAttribute="leading" secondItem="MyD-vj-m8u" secondAttribute="trailing" constant="8" id="oWG-94-51M"/>
+                            <constraint firstItem="4IW-ql-zjQ" firstAttribute="centerY" secondItem="MyD-vj-m8u" secondAttribute="centerY" constant="-0.5" id="wb7-ps-JmS"/>
+                            <constraint firstItem="B6e-BQ-Se7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-7" id="yYg-sx-0xA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="4IW-ql-zjQ" id="W7b-6m-jqF"/>
@@ -61,6 +108,9 @@
             <point key="canvasLocation" x="172" y="281"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="screen" width="189" height="267"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
