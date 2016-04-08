@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../firebase_talk/First.swift">
+   </FileRef>
+   <FileRef
       location = "group:firebase_test.xcodeproj">
    </FileRef>
    <FileRef

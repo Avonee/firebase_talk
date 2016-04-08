@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		723F426B0EB96DA6BADDA907 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5B987488C317C08008DBEA /* Pods.framework */; };
+		BEA58DCA1CB7A9BC00950AD1 /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA58DC91CB7A9BC00950AD1 /* First.swift */; };
 		BEEF2E9C1CB2BA4E0061547C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF2E9B1CB2BA4E0061547C /* AppDelegate.swift */; };
 		BEEF2E9F1CB2BA4E0061547C /* firebase_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEEF2E9D1CB2BA4E0061547C /* firebase_test.xcdatamodeld */; };
 		BEEF2EA11CB2BA4E0061547C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF2EA01CB2BA4E0061547C /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0B5B987488C317C08008DBEA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF07CC5388041EEB3F16FFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BEA58DC91CB7A9BC00950AD1 /* First.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
 		BEEF2E961CB2BA4E0061547C /* firebase_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF2E9A1CB2BA4E0061547C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEEF2E9B1CB2BA4E0061547C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		BEEF2E981CB2BA4E0061547C /* firebase_test */ = {
 			isa = PBXGroup;
 			children = (
+				BEA58DC91CB7A9BC00950AD1 /* First.swift */,
 				BEEF2E9B1CB2BA4E0061547C /* AppDelegate.swift */,
 				BEEF2EA01CB2BA4E0061547C /* ViewController.swift */,
 				BEEF2EA21CB2BA4E0061547C /* Main.storyboard */,
@@ -292,6 +295,7 @@
 			files = (
 				BEEF2EA11CB2BA4E0061547C /* ViewController.swift in Sources */,
 				BEEF2E9F1CB2BA4E0061547C /* firebase_test.xcdatamodeld in Sources */,
+				BEA58DCA1CB7A9BC00950AD1 /* First.swift in Sources */,
 				BEEF2E9C1CB2BA4E0061547C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

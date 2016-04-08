@@ -15,7 +15,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     // Create a reference to a Firebase location
 //    var myRootRef = Firebase(url:"https://chatroom-ios-test.firebaseio.com")
     var myRootRef = Firebase(url:"https://vivid-inferno-5031.firebaseio.com")
-    
+    var getName = ""
     
     
     @IBOutlet weak var outPut: UITextView!
@@ -51,6 +51,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         nameInput.delegate = self
         textInput.delegate = self
+        
+        
+        if getName != ""{
+            nameInput.text = getName
+        }
         // Write data to Firebase
         
         
